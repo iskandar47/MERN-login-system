@@ -16,10 +16,10 @@ const UseSchema = new mongoose.Schema({
         type : String,
         enum : ['user' , 'admin'],
     },
-    todos : {
-        type : mongoose.Schema.Types.ObjectId,
-        ref : 'Todo',
-    }
+    todos : 
+        [{type : mongoose.Schema.Types.ObjectId,
+        ref : 'Todo'}]
+    
 });
 
 UseSchema.pre('save', function(next){
