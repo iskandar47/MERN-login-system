@@ -9,6 +9,7 @@ app.use(exprees.json());
 
 const URI = "mongodb+srv://salimdriai:Salimdr1892@cluster0.5yvav.mongodb.net/usersdata?retryWrites=true&w=majority";
 
+
 mongoose.connect(URI, {
     useNewUrlParser : true,
     useUnifiedTopology : true
