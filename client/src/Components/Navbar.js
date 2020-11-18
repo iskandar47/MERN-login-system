@@ -74,6 +74,7 @@ const Navbar = props => {
                     authenticatedNav()
                     }
                 </ul>
+                {isAuthenticated ? <h3>{user.username}</h3> : null}
             </div>
         </nav>
     )
