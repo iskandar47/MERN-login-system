@@ -4,6 +4,8 @@ import Navbar from "./Components/Navbar"
 import Home from "./Components/Home"
 import Login from "./Components/Login"
 import Register from "./Components/Register"
+import Todos from "./Components/Todos"
+import Admin from "./Components/Admin"
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
         <Route exact path="/"> <Home /> </Route>
         <Route path="/login"> <Login /> </Route>
         <Route path="/register"> <Register /> </Route>
+        <Route path="/todos"> <Todos /> </Route>
+        <Route path="/admin"> <Admin/> </Route>
       </Router>
   );
 }
