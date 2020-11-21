@@ -42,9 +42,19 @@ const Todos = props => {
     const resetForm = () => {
         setTodo({name : ""})
     }
+    
+    const clearList = () => {
+        console.log("working")
+        TodoService.deletTodo()
+    }
 
     return (
         <div>
+            <button 
+            onClick={clearList}
+            className="btn btn-primary btn-lg">
+                Clear list
+            </button>
             <ul>
                 {todos.map(todo => (
                     <TodoItem key={todo._id} todo={todo} />

@@ -18,12 +18,6 @@ mongoose.connect(URI, {
 }).catch((err)=>{
     console.log(err)
 });
-/* mongoose.connect(URI, {
-    useNewUrlParser :true,
-    useUnifiedTopology: true
-}, ()=> {
-    console.log("successfuly connected to database")
-}) */
 
 const userRouter = require("./routes/user.js");
 app.use("/user", userRouter);

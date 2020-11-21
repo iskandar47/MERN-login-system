@@ -1,7 +1,7 @@
 
 export default {
     getTodos : () => {
-        return fetch("./user/todos")
+        return fetch("/user/todos")
                 .then(response => {
                     if (response.status !== 401){
                         return response.json(data => data)
@@ -24,5 +24,12 @@ export default {
                 return {message : { msgBody : "Unauthorized", msgError : true}}
             }
         })
+    },
+    deletTodo : () => {
+        return fetch("/user/todos", {
+            method : "DELETE"
+        }).then(data => data)
+        .catch(err => console.log(err))
     }
+    
 }
